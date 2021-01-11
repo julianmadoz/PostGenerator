@@ -1,5 +1,12 @@
     let imagesamount = 3
-    let imageSizeXY = 200
+    let imageSizeXY = 500
+
+    WebFont.load( {
+    	google: {
+    		families: [ 'Montserrat:300,400,700,800,900', 'Squada One' ]
+    	}
+    } );
+    print( fonts )
 
 
     class post {
