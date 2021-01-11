@@ -14,6 +14,12 @@
     	}
     }
 
+    WebFont.load( {
+    	google: {
+    		families: [ 'Rokkitt:300,400,800', 'Squada One' ]
+    	}
+    } );
+
 
     function setup() {
 
@@ -83,7 +89,7 @@
     	images[ closer ].textFont( 'Rokkitt', 50 )
     	images[ closer ].textStyle( NORMAL )
     	images[ closer ].fill( 'Grey' )
-    	images[ closer ].text( '01/09/97', images[ active_images ].width / 2, 2 * images[ active_images ].height / 3 )
+    	images[ closer ].text( '01/09/97', images[ active_images ].width / 2, 2 * images[ active_images ].height / 3 - 70 )
 
     }
 
@@ -141,7 +147,7 @@
     function clear_all() {
     	for ( let i = 0; i < imagesamount; i++ ) {
     		images[ i ].clear()
-    		images[ i ].background( 100 )
+    		images[ i ].background( 255 )
     	}
 
     }
