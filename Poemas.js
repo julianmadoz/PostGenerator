@@ -5,12 +5,12 @@
     let img_am_text = 0
     let img_close = 0
 
-
     class post {
     	constructor() {
     		this.title = ''
     		this.text = ''
     		this.date = ''
+    		this.dada = 'adas'
     	}
     }
 
