@@ -1,6 +1,6 @@
     let imagesamount = 10
     let active_images = 2
-    let imageSizeXY = windowWidth / 2.2
+    let imageSizeXY = 200
     let img_t = 0
     let img_am_text = 0
     let img_close = 0
@@ -29,6 +29,7 @@
     	post.text = createElement( 'textarea', '' )
     	post.text.attribute( "rows", "15" );
     	post.text.attribute( "cols", "70" );
+    	imageSizeXY = windowWidth / 2.2
     	cv = createCanvas( windowWidth, imageSizeXY )
     	createButton( 'Save' ).mousePressed( btn_p )
     	images = []
