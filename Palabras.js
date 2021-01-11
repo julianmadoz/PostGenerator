@@ -27,7 +27,6 @@
     	createButton( 'Save' ).mousePressed( btn_p )
     	images = []
     	createGR
-    	print( 'version: ' + document.lastModified )
 
 
     }
