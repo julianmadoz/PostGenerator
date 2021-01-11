@@ -6,7 +6,6 @@
     		families: [ 'Montserrat:300,400,700,800,900', 'Squada One' ]
     	}
     } );
-    print( fonts )
 
 
     class post {
