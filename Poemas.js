@@ -1,6 +1,6 @@
     let imagesamount = 10
     let active_images = 2
-    let imageSizeXY = 300
+    let imageSizeXY = windowWidth / 2.2
     let img_t = 0
     let img_am_text = 0
     let img_close = 0
