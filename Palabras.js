@@ -102,6 +102,7 @@
     function display_images() {
     	colsAM = floor( windowWidth / imageSizeXY )
     	rowsAM = 1 + floor( imagesamount / colsAM )
+    	if ( rowsAM == 0 ) { rowsAM = 1 }
     	resizeCanvas( windowWidth, imageSizeXY * rowsAM )
     	row = 0
     	col = 0
