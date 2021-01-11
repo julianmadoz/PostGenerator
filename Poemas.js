@@ -29,11 +29,14 @@
     	post.text = createElement( 'textarea', '' )
     	post.text.attribute( "rows", "15" );
     	post.text.attribute( "cols", "70" );
-    	imageSizeXY = windowWidth / 2.2
+    	if ( imageSizeXY = windowWidth / 2 > 400 ) {
+    		imageSizeXY = 400
+    	} else { imageSizeXY = windowWidth / 2 }
     	cv = createCanvas( windowWidth, imageSizeXY )
     	createButton( 'Save' ).mousePressed( btn_p )
     	images = []
     	createGR()
+    	print( 'version: ' + document.lastModified )
 
 
     }
@@ -125,7 +128,8 @@
 
     function display_images() {
     	colsAM = floor( windowWidth / imageSizeXY )
-    	rowsAM = 1 + floor( active_images / colsAM )
+    	rowsAM = floor( active_images / colsAM )
+    	if ( rowsAM == 0 ) { rowsAM = 1 }
     	resizeCanvas( windowWidth, imageSizeXY * rowsAM )
     	row = 0
     	col = 0

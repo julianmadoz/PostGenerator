@@ -26,7 +26,8 @@
     	cv = createCanvas( windowWidth, imageSizeXY )
     	createButton( 'Save' ).mousePressed( btn_p )
     	images = []
-    	createGR()
+    	createGR
+    	print( 'version: ' + document.lastModified )
 
 
     }
