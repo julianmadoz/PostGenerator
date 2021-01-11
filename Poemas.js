@@ -16,7 +16,7 @@
 
     WebFont.load( {
     	google: {
-    		families: [ 'Rokkitt:300,400,800', 'Squada One' ]
+    		families: [ 'Rokkitt:300,400,900', 'Squada One' ]
     	}
     } );
 
@@ -24,7 +24,7 @@
     function setup() {
 
     	post = new post()
-    	post.title = createInput( '' )
+    	post.title = createElement( 'textarea', '' )
     	post.date = createInput( '' )
     	post.text = createElement( 'textarea', '' )
     	post.text.attribute( "rows", "15" );
@@ -54,9 +54,8 @@
     	for ( let i = 0; i < active_images; i++ ) {
     		name = post.title.value() + str( i ) + '_' + floor( millis() ) + '.jpg'
     		images[ i ].save( name )
-
-
     	}
+    	Loop()
     }
 
     function createGR() {
@@ -68,25 +67,26 @@
 
     function print_title_date() {
     	images[ 0 ].textAlign( CENTER, CENTER )
-    	images[ 0 ].textFont( 'Rokkitt', 100 )
+    	images[ 0 ].textFont( 'Rokkitt', 72 )
+    	images[ 0 ].textLeading( 72 )
     	images[ 0 ].textStyle( BOLD )
     	images[ 0 ].fill( 'Black' )
     	// images[ 0 ].text( post.title.value(), images[ 0 ].width / 2, images[ 0 ].height / 2 )
     	images[ 0 ].text( post.title.value(), images[ 0 ].width / 10, images[ 0 ].height / 3, 8 * images[ 0 ].width / 10, images[ 0 ].height / 3 )
-    	images[ 0 ].textFont( 'Rokkitt', 50 )
+    	images[ 0 ].textFont( 'Rokkitt', 48 )
     	images[ 0 ].textStyle( NORMAL )
     	images[ 0 ].fill( 'Grey' )
-    	images[ 0 ].text( post.date.value(), images[ 0 ].width / 2, 2 * images[ 0 ].height / 3 )
+    	images[ 0 ].text( post.date.value(), images[ 0 ].width / 2, 2 * images[ 0 ].height / 3 - 50 )
 
     }
 
     function print_closer( closer ) {
     	images[ closer ].textAlign( CENTER, CENTER )
-    	images[ closer ].textFont( 'Rokkitt', 100 )
+    	images[ closer ].textFont( 'Rokkitt', 72 )
     	images[ closer ].textStyle( BOLD )
     	images[ closer ].fill( 'Black' )
     	images[ closer ].text( '. A quien corresponda', images[ active_images ].width / 2, images[ active_images ].height / 2 )
-    	images[ closer ].textFont( 'Rokkitt', 50 )
+    	images[ closer ].textFont( 'Rokkitt', 48 )
     	images[ closer ].textStyle( NORMAL )
     	images[ closer ].fill( 'Grey' )
     	images[ closer ].text( '01/09/97', images[ active_images ].width / 2, 2 * images[ active_images ].height / 3 - 70 )
@@ -94,7 +94,7 @@
     }
 
     function print_text( text, i ) {
-    	images[ i ].textFont( 'Rokkitt', 40 )
+    	images[ i ].textFont( 'Rokkitt', 48 )
     	images[ i ].textStyle( NORMAL )
     	images[ i ].textAlign( RIGHT, CENTER )
     	images[ i ].fill( 0, 0, 0, 76 )
