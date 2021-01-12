@@ -22,7 +22,6 @@
 
 
     function setup() {
-    	rokkittBlack = loadFont( 'https://github.com/julianmadoz/PostGenerator/raw/main/Rokkitt-Black.ttf' )
     	post = new post()
     	post.title = createElement( 'textarea', '' )
     	post.date = createInput( '' )
@@ -70,9 +69,9 @@
 
     function print_title_date() {
     	images[ 0 ].textAlign( CENTER, CENTER )
-    	images[ 0 ].textFont( rokkittBlack, 72 )
+    	images[ 0 ].textFont( 'Rokkitt', 72 )
     	images[ 0 ].textLeading( 72 )
-    	// images[ 0 ].textStyle( BOLD )
+    	images[ 0 ].textStyle( BOLD )
     	images[ 0 ].fill( 'Black' )
     	// images[ 0 ].text( post.title.value(), images[ 0 ].width / 2, images[ 0 ].height / 2 )
     	images[ 0 ].text( post.title.value(), images[ 0 ].width / 10, images[ 0 ].height / 3, 8 * images[ 0 ].width / 10, images[ 0 ].height / 3 )
