@@ -1,4 +1,4 @@
-    let imagesamount = 3
+    let imagesamount22 = 3
     let imageSizeXY = 500
 
     WebFont.load( {
@@ -45,7 +45,7 @@
 
     function btn_p() {
     	noLoop()
-    	for ( let i = 0; i < imagesamount; i++ ) {
+    	for ( let i = 0; i < imagesamount2; i++ ) {
     		name = post.title.value() + str( i ) + '_' + floor( millis() ) + '.jpg'
     		images[ i ].save( name )
 
@@ -92,20 +92,20 @@
     function elaborate_text() {
     	oText = post.text.value()
     	text = splitTokens( oText, '\n' )
-    	for ( let i = 0; i < imagesamount; i++ ) {
+    	for ( let i = 0; i < imagesamount2; i++ ) {
     		print_text( text[ i ], i )
     	}
-    	imagesamount = text.length
+    	imagesamount2 = text.length
     }
 
     function display_images() {
     	colsAM = floor( windowWidth / imageSizeXY )
-    	rowsAM = 1 + floor( imagesamount / colsAM )
+    	rowsAM = 1 + floor( imagesamount2 / colsAM )
     	if ( rowsAM == 0 ) { rowsAM = 1 }
     	resizeCanvas( windowWidth, imageSizeXY * rowsAM )
     	row = 0
     	col = 0
-    	for ( let i = 0; i < imagesamount; i++ ) {
+    	for ( let i = 0; i < imagesamount2; i++ ) {
 
     		if ( col == colsAM ) {
 
@@ -122,7 +122,7 @@
 
 
     function clear_all() {
-    	for ( let i = 0; i < imagesamount; i++ ) {
+    	for ( let i = 0; i < imagesamount2; i++ ) {
     		images[ i ].clear()
     		images[ i ].background( '#F0C200' )
     	}
@@ -130,7 +130,7 @@
     }
 
     function print_category() {
-    	for ( let i = 0; i < imagesamount; i++ ) {
+    	for ( let i = 0; i < imagesamount2; i++ ) {
     		footer.clear()
     		footer.textAlign( LEFT, TOP )
     		footer.textFont( 'Squada One' )
