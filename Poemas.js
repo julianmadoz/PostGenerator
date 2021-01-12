@@ -16,7 +16,7 @@
 
     WebFont.load( {
     	google: {
-    		families: [ 'Rokkitt:300,400,900', 'Squada One' ]
+    		families: [ 'Rokkitt:400,900', 'Squada One' ]
     	}
     } );
 
