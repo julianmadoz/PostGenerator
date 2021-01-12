@@ -1,5 +1,5 @@
     let imagesamount2 = 3
-    let imageSizeXY = 500
+    let imageSizeXY2 = 500
 
     WebFont.load( {
     	google: {
@@ -23,7 +23,7 @@
     	post.text = createElement( 'textarea', '' )
     	post.text.attribute( "rows", "15" );
     	post.text.attribute( "cols", "70" );
-    	cv = createCanvas( windowWidth, imageSizeXY )
+    	cv = createCanvas( windowWidth, imageSizeXY2 )
     	createButton( 'Save' ).mousePressed( btn_p )
     	images = []
     	createGR
@@ -99,10 +99,10 @@
     }
 
     function display_images() {
-    	colsAM = floor( windowWidth / imageSizeXY )
+    	colsAM = floor( windowWidth / imageSizeXY2 )
     	rowsAM = 1 + floor( imagesamount2 / colsAM )
     	if ( rowsAM == 0 ) { rowsAM = 1 }
-    	resizeCanvas( windowWidth, imageSizeXY * rowsAM )
+    	resizeCanvas( windowWidth, imageSizeXY2 * rowsAM )
     	row = 0
     	col = 0
     	for ( let i = 0; i < imagesamount2; i++ ) {
@@ -113,7 +113,7 @@
     			row = row + 1
 
     		}
-    		image( images[ i ], ( imageSizeXY + 1 ) * col, ( imageSizeXY + 1 ) * row, imageSizeXY, imageSizeXY, 0, 0, 1000, 1000 )
+    		image( images[ i ], ( imageSizeXY2 + 1 ) * col, ( imageSizeXY2 + 1 ) * row, imageSizeXY2, imageSizeXY2, 0, 0, 1000, 1000 )
     		col = col + 1
     	}
 
