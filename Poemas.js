@@ -16,13 +16,13 @@
 
     WebFont.load( {
     	google: {
-    		families: [ 'Rokkitt:400,900', 'Squada One' ]
+    		families: [ 'Rokkitt:400,900' ]
     	}
     } );
 
 
     function setup() {
-
+    	rokkittBlack = loadFont( 'Rokkit-Black.tff' )
     	post = new post()
     	post.title = createElement( 'textarea', '' )
     	post.date = createInput( '' )
@@ -42,7 +42,7 @@
 
     function draw() {
     	clear_all()
-    	background( 220 )
+    	background( 255 )
     	print_title_date()
     	elaborate_text()
     	print_closer( active_images - 1 )
@@ -70,9 +70,9 @@
 
     function print_title_date() {
     	images[ 0 ].textAlign( CENTER, CENTER )
-    	images[ 0 ].textFont( 'Rokkitt', 72 )
+    	images[ 0 ].textFont( rokkittBlack, 72 )
     	images[ 0 ].textLeading( 72 )
-    	images[ 0 ].textStyle( BOLD )
+    	// images[ 0 ].textStyle( BOLD )
     	images[ 0 ].fill( 'Black' )
     	// images[ 0 ].text( post.title.value(), images[ 0 ].width / 2, images[ 0 ].height / 2 )
     	images[ 0 ].text( post.title.value(), images[ 0 ].width / 10, images[ 0 ].height / 3, 8 * images[ 0 ].width / 10, images[ 0 ].height / 3 )
