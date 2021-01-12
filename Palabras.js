@@ -1,4 +1,4 @@
-    let imagesamount22 = 3
+    let imagesamount2 = 3
     let imageSizeXY = 500
 
     WebFont.load( {
