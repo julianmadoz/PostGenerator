@@ -8,7 +8,7 @@
     } );
 
 
-    class post {
+    class Palabra {
     	constructor() {
     		this.title = ''
     		this.text = ''
@@ -18,7 +18,7 @@
 
     function setup() {
 
-    	post = new post()
+    	post = new Palabra()
     	post.title = createInput( '' )
     	post.text = createElement( 'textarea', '' )
     	post.text.attribute( "rows", "15" );
@@ -26,7 +26,7 @@
     	cv = createCanvas( windowWidth, imageSizeXY2 )
     	createButton( 'Save' ).mousePressed( btn_p )
     	images = []
-    	createGR
+    	createGR()
 
 
     }
@@ -100,7 +100,7 @@
 
     function display_images() {
     	colsAM = floor( windowWidth / imageSizeXY2 )
-    	rowsAM = 1 + floor( imagesamount2 / colsAM )
+    	rowsAM = floor( imagesamount2 / colsAM )
     	if ( rowsAM == 0 ) { rowsAM = 1 }
     	resizeCanvas( windowWidth, imageSizeXY2 * rowsAM )
     	row = 0
