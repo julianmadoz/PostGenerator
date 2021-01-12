@@ -22,7 +22,7 @@
 
 
     function setup() {
-    	rokkittBlack = loadFont( 'Rokkit-Black.tff' )
+    	rokkittBlack = loadFont( 'https://github.com/julianmadoz/PostGenerator/raw/main/Rokkitt-Black.ttf' )
     	post = new post()
     	post.title = createElement( 'textarea', '' )
     	post.date = createInput( '' )
