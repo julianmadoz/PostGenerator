@@ -140,4 +140,6 @@
     		footer.text( 'PALABRA DEL DIA', -5, 0, 2000, 200 )
     		images[ i ].image( footer, 0, 760, 1013, 350 )
     	}
+
+
     }
