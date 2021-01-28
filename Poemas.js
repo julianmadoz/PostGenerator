@@ -127,8 +127,6 @@
     function display_images() {
     	colsAM = floor( windowWidth / imageSizeXY )
     	rowsAM = ceil( active_images / colsAM )
-    	print( 'ro' + rowsAM )
-    	print( active_images )
     	// if ( rowsAM == 0 ) { rowsAM = 1 } else { rowsAM = rowsAM + 1 }
     	resizeCanvas( windowWidth, imageSizeXY * rowsAM )
     	row = 0
